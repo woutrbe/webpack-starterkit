@@ -61,7 +61,8 @@ module.exports = {
 	devServer: {
 		contentBase: './build',
 		inline: true,
-		port: 5000
+		port: 5000,
+		historyApiFallback: true
 	},
 
 	imageWebpackLoader: {
