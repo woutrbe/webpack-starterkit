@@ -1,6 +1,10 @@
 var path 				= require('path');
 var CleanWebpackPlugin 	= require('clean-webpack-plugin');
 var ExtractTextPlugin 	= require('extract-text-webpack-plugin');
+var Dashboard 			= require('webpack-dashboard');
+var DashboardPlugin 	= require('webpack-dashboard/plugin');
+
+var dashboard = new Dashboard();
 
 var appName = 'starter';
 var baseFolder = __dirname + '/..';
@@ -25,7 +29,8 @@ module.exports = {
 			dry: false
 		}),
 		extractIndex,
-		extractCSS
+		extractCSS,
+		new DashboardPlugin(dashboard.setData)
 	],
 	module: {
 		loaders: [
@@ -62,7 +67,8 @@ module.exports = {
 		contentBase: './build',
 		inline: true,
 		port: 5000,
-		historyApiFallback: true
+		historyApiFallback: true,
+		quiet: true // Turn of error logging
 	},
 
 	imageWebpackLoader: {
@@ -71,4 +77,4 @@ module.exports = {
 			speed: 4
 		}
 	}
-}
+};
