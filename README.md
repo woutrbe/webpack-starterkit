@@ -4,6 +4,10 @@
 
 I used Vue.js as an example, you can use any JavaScript framework you like.
 
+## Looking for Webpack 2?
+
+An example with Vue and Webpack 2 is available [on GitHub](https://github.com/woutrbe/webpack2-vue-starterkit)
+
 ## Installation
 
 You can clone this repository [from GitHub](https://github.com/woutrbe/webpack-starterkit)
